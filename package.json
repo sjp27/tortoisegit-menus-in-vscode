@@ -1,9 +1,9 @@
 {
-	"name": "tortoisegit-buttons-in-vscode",
-	"displayName": "TortoiseGit Buttons",
-	"description": "Shows TortoiseGit buttons in VScode File-Explorer, when you right-click on any file/folder.",
-	"version": "0.1.32",
-	"publisher": "Puvox",
+	"name": "tortoisegit-menus-in-vscode",
+	"displayName": "TortoiseGit Menus",
+	"description": "Shows TortoiseGit menus in VScode File-Explorer, when you right-click on any file/folder.",
+	"version": "1.0.0",
+	"publisher": "sjp27",
 	"engines": {
 		"vscode": "^1.64.0"
 	},
@@ -13,455 +13,131 @@
 	"icon": "icon.png",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Puvox/tortoisegit-buttons-in-vscode.git"
+		"url": "https://github.com/sjp27/tortoisegit-menus-in-vscode.git"
 	},
 	"main": "./out/extension.js",
 	"activationEvents": [
-		"onCommand:puvox.tgit.pull",
-		"onCommand:puvox.tgit.fetch",
-		"onCommand:puvox.tgit.commit",
-		"onCommand:puvox.tgit.push",
-		"onCommand:puvox.tgit.stashsave",
-		"onCommand:puvox.tgit.stashapply",
-		"onCommand:puvox.tgit.stashpop",
-		"onCommand:puvox.tgit.rename",
-		"onCommand:puvox.tgit.revert",
-		"onCommand:puvox.tgit.log",
-		"onCommand:puvox.tgit.blame",
-		"onCommand:puvox.tgit.diff",
-		"onCommand:puvox.tgit.repostatus",
-		"onCommand:puvox.tgit.showcompare",
-		"onCommand:puvox.tgit.refbrowse",
-		"onCommand:puvox.tgit.reflog",
-		"onCommand:puvox.tgit.repobrowser",
-		"onCommand:puvox.tgit.revisiongraph",
-		"onCommand:puvox.tgit.resolve",
-		"onCommand:puvox.tgit.conflicteditor",
-		"onCommand:puvox.tgit.cleanup",
-		"onCommand:puvox.tgit.rebase",
-		"onCommand:puvox.tgit.merge",
-		"onCommand:puvox.tgit.switch",
-		"onCommand:puvox.tgit.add",
-		"onCommand:puvox.tgit.remove",
-		"onCommand:puvox.tgit.ignore",
-		"onCommand:puvox.tgit.bisect",
-		"onCommand:puvox.tgit.tag",
-		"onCommand:puvox.tgit.settings",
-		"onCommand:puvox.tgit.subadd",
-		"onCommand:puvox.tgit.subupdate",
-		"onCommand:puvox.tgit.subsync",
-		"onCommand:puvox.tgit.export",
-		"onCommand:puvox.tgit.lfslocks",
-		"onCommand:puvox.tgit.daemon"
+		"onCommand:sjp27.tgit.add",
+		"onCommand:sjp27.tgit.blame",
+		"onCommand:sjp27.tgit.commit",
+		"onCommand:sjp27.tgit.diff",
+		"onCommand:sjp27.tgit.log",
+		"onCommand:sjp27.tgit.revert"
 	],
 	"contributes": {
 		"commands": [
 			{
-				"command": "puvox.tgit.commit",
-				"title": "🐢 Commit"
-			},
-			{
-				"command": "puvox.tgit.pull",
-				"title": "Pull"
-			},
-			{
-				"command": "puvox.tgit.fetch",
-				"title": "Fetch"
-			},
-			{
-				"command": "puvox.tgit.push",
-				"title": "🠕 Push"
-			},
-			{
-				"command": "puvox.tgit.stashsave",
-				"title": "Stash Save"
-			},
-			{
-				"command": "puvox.tgit.stashapply",
-				"title": "Stash Apply"
-			},
-			{
-				"command": "puvox.tgit.stashpop",
-				"title": "Stash Pop"
-			},
-			{
-				"command": "puvox.tgit.rename",
-				"title": "🐢 Rename"
-			},
-			{
-				"command": "puvox.tgit.log",
-				"title": "Log"
-			},
-			{
-				"command": "puvox.tgit.refbrowse",
-				"title": "RefBrowse"
-			},
-			{
-				"command": "puvox.tgit.reflog",
-				"title": "RefLog"
-			},
-			{
-				"command": "puvox.tgit.repobrowser",
-				"title": "Repo Browser"
-			},
-			{
-				"command": "puvox.tgit.revisiongraph",
-				"title": "Revision Graph"
-			},
-			{
-				"command": "puvox.tgit.resolve",
-				"title": "Resolve"
-			},
-			{
-				"command": "puvox.tgit.repostatus",
-				"title": "Check for modifications"
-			},
-			{
-				"command": "puvox.tgit.showcompare",
-				"title": "Show Compare"
-			},
-			{
-				"command": "puvox.tgit.conflicteditor",
-				"title": "Conflict Editor"
-			},
-			{
-				"command": "puvox.tgit.revert",
-				"title": "Revert"
-			},
-			{
-				"command": "puvox.tgit.blame",
-				"title": "Blame"
-			},
-			{
-				"command": "puvox.tgit.cleanup",
-				"title": "Cleanup"
-			},
-			{
-				"command": "puvox.tgit.diff",
-				"title": "Diff"
-			},
-			{
-				"command": "puvox.tgit.rebase",
-				"title": "Rebase"
-			},
-			{
-				"command": "puvox.tgit.merge",
-				"title": "Merge"
-			},
-			{
-				"command": "puvox.tgit.switch",
-				"title": "↠ Switch"
-			},
-			{
-				"command": "puvox.tgit.add",
-				"title": "✅ Add"
-			},
-			{
-				"command": "puvox.tgit.remove",
-				"title": "❌ Remove"
-			},
-			{
-				"command": "puvox.tgit.ignore",
-				"title": "✖ Ignore"
-			},
-			{
-				"command": "puvox.tgit.bisect",
-				"title": "Bisect"
-			},
-			{
-				"command": "puvox.tgit.tag",
-				"title": "Tag"
-			},
-			{
-				"command": "puvox.tgit.export",
-				"title": "Export"
-			},
-			{
-				"command": "puvox.tgit.lfslocks",
-				"title": "lfslocks"
-			},
-			{
-				"command": "puvox.tgit.daemon",
-				"title": "daemon"
-			},
-			{
-				"command": "puvox.tgit.subadd",
+				"command": "sjp27.tgit.add",
 				"title": "Add"
 			},
 			{
-				"command": "puvox.tgit.subupdate",
-				"title": "Update"
+				"command": "sjp27.tgit.blame",
+				"title": "Blame"
 			},
 			{
-				"command": "puvox.tgit.subsync",
-				"title": "Sync"
+				"command": "sjp27.tgit.commit",
+				"title": "Commit"
 			},
 			{
-				"command": "puvox.tgit.settings",
-				"title": "⚙️ Settings"
+				"command": "sjp27.tgit.diff",
+				"title": "Diff"
+			},
+			{
+				"command": "sjp27.tgit.log",
+				"title": "Log"
+			},
+			{
+				"command": "sjp27.tgit.revert",
+				"title": "Revert"
 			}
-		],
-		"submenus": [
-		  {
-			"id": "puvox.tgit.sub_sync",
-			"label": "🐢 Sync"
-		  },
-		  {
-			"id": "puvox.tgit.sub_stash",
-			"label": "🐢 Stash"
-		  },
-		  {
-			"id": "puvox.tgit.sub_repoothers",
-			"label": "🐢 Other"
-		  },
-		  {
-			"id": "puvox.tgit.sub_branch",
-			"label": "🐢 Branch "
-		  },
-		  {
-			"id": "puvox.tgit.sub_submodule",
-			"label": "⚎ Submodule"
-		  }
 		],
 		"menus": {
 			"editor/context": [
 				{
-					"command": "puvox.tgit.commit",
+					"command": "sjp27.tgit.add",
 					"when": "editorFocus",
 					"group": "t_git@5"
 				},
 				{
-					"submenu": "puvox.tgit.sub_sync",
+					"command": "sjp27.tgit.blame",
 					"when": "editorFocus",
 					"group": "t_git@10"
 				},
 				{
-					"submenu": "puvox.tgit.sub_stash",
+					"command": "sjp27.tgit.commit",
 					"when": "editorFocus",
 					"group": "t_git@15"
 				},
 				{
-					"command": "puvox.tgit.rename",
+					"command": "sjp27.tgit.diff",
 					"when": "editorFocus",
 					"group": "t_git@20"
 				},
 				{
-					"submenu": "puvox.tgit.sub_branch",
+					"command": "sjp27.tgit.log",
 					"when": "editorFocus",
-					"group": "t_git@27"
+					"group": "t_git@25"
 				},
 				{
-					"submenu": "puvox.tgit.sub_repoothers",
+					"command": "sjp27.tgit.revert",
 					"when": "editorFocus",
-					"group": "t_git@35"
+					"group": "t_git@30"
 				}
 			],
 			"explorer/context": [
 				{
-					"command": "puvox.tgit.commit",
+					"command": "sjp27.tgit.add",
 					"group": "t_git@5"
 				},
 				{
-					"submenu": "puvox.tgit.sub_sync",
+					"command": "sjp27.tgit.blame",
 					"group": "t_git@10"
 				},
 				{
-					"submenu": "puvox.tgit.sub_stash",
+					"command": "sjp27.tgit.commit",
 					"group": "t_git@15"
 				},
 				{
-					"command": "puvox.tgit.rename",
+					"command": "sjp27.tgit.diff",
 					"group": "t_git@20"
 				},
 				{
-					"submenu": "puvox.tgit.sub_branch",
-					"group": "t_git@27"
+					"command": "sjp27.tgit.log",
+					"group": "t_git@25"
 				},
 				{
-					"submenu": "puvox.tgit.sub_repoothers",
-					"group": "t_git@35"
+					"command": "sjp27.tgit.revert",
+					"group": "t_git@30"
 				}
 			],
 			"editor/title/context": [
 				{
-					"command": "puvox.tgit.commit",
+					"command": "sjp27.tgit.add",
 					"group": "t_git@5"
 				},
 				{
-					"submenu": "puvox.tgit.sub_sync",
+					"command": "sjp27.tgit.blame",
 					"group": "t_git@10"
 				},
 				{
-					"submenu": "puvox.tgit.sub_stash",
+					"command": "sjp27.tgit.commit",
 					"group": "t_git@15"
 				},
 				{
-					"command": "puvox.tgit.rename",
+					"command": "sjp27.tgit.diff",
 					"group": "t_git@20"
 				},
 				{
-					"submenu": "puvox.tgit.sub_branch",
-					"group": "t_git@27"
+					"command": "sjp27.tgit.log",
+					"group": "t_git@25"
 				},
 				{
-					"submenu": "puvox.tgit.sub_repoothers",
-					"group": "t_git@35"
+					"command": "sjp27.tgit.revert",
+					"group": "t_git@30"
 				}
-            ],
-			"puvox.tgit.sub_sync" : [
-				{
-					"command": "puvox.tgit.pull",
-					"group": "t_git_sub_sync@1"
-				},
-				{
-					"command": "puvox.tgit.fetch",
-					"group": "t_git_sub_sync@2"
-				},
-				{
-					"command": "puvox.tgit.push",
-					"group": "t_git_sub_sync@3"
-				}
-			],
-			"puvox.tgit.sub_stash" : [
-				{
-					"command": "puvox.tgit.stashsave",
-					"group": "t_git_sub_stash@1"
-				},
-				{
-					"command": "puvox.tgit.stashapply",
-					"group": "t_git_sub_stash@2"
-				},
-				{
-					"command": "puvox.tgit.stashpop",
-					"group": "t_git_sub_stash@3"
-				}
-			],
-			"puvox.tgit.sub_repoothers" : [
-				{
-					"command": "puvox.tgit.log",
-					"group": "t_git_sub_repoothers@3"
-				},
-				{
-					"command": "puvox.tgit.blame",
-					"group": "t_git_sub_repoothers@6"
-				},
-				{
-					"command": "puvox.tgit.refbrowse",
-					"group": "t_git_sub_repoothers@10"
-				},
-				{
-					"command": "puvox.tgit.reflog",
-					"group": "t_git_sub_repoothers@11"
-				},
-				{
-					"command": "puvox.tgit.repobrowser",
-					"group": "t_git_sub_repoothers@15"
-				},
-				{
-					"command": "puvox.tgit.revisiongraph",
-					"group": "t_git_sub_repoothers@17"
-				},
-				{
-					"command": "puvox.tgit.diff",
-					"group": "t_git_sub_repoothers@25"
-				},
-				{
-					"command": "puvox.tgit.repostatus",
-					"group": "t_git_sub_repoothers@28"
-				},
-				{
-					"command": "puvox.tgit.showcompare",
-					"group": "t_git_sub_repoothers@30"
-				},
-				{
-					"command": "puvox.tgit.resolve",
-					"group": "t_git_sub_repoothers@35"
-				},
-				{
-					"command": "puvox.tgit.conflicteditor",
-					"group": "t_git_sub_repoothers@40"
-				},
-				{
-					"command": "puvox.tgit.revert",
-					"group": "t_git_sub_repoothers@45"
-				},
-				{
-					"command": "puvox.tgit.cleanup",
-					"group": "t_git_sub_repoothers@50"
-				},
-				{
-					"command": "puvox.tgit.add",
-					"group": "t_git_sub_repoothers@55"
-				},
-				{
-					"command": "puvox.tgit.remove",
-					"group": "t_git_sub_repoothers@60"
-				},
-				{
-					"command": "puvox.tgit.ignore",
-					"group": "t_git_sub_repoothers@62"
-				},
-				{
-					"command": "puvox.tgit.bisect",
-					"group": "t_git_sub_repoothers@65"
-				},
-				{
-					"command": "puvox.tgit.tag",
-					"group": "t_git_sub_repoothers@67"
-				},
-				{
-					"command": "puvox.tgit.export",
-					"group": "t_git_sub_repoothers@67"
-				},
-				{
-					"submenu": "puvox.tgit.sub_submodule",
-					"group": "t_git_sub_repoothers@70"
-				},
-				{
-					"command": "puvox.tgit.settings",
-					"group": "t_git_sub_repoothers@75"
-				}
-			],
-			"puvox.tgit.sub_branch" : [
-				{
-					"command": "puvox.tgit.rebase",
-					"group": "t_git_sub_branch@3"
-				},
-				{
-					"command": "puvox.tgit.merge",
-					"group": "t_git_sub_branch@2"
-				},
-				{
-					"command": "puvox.tgit.switch",
-					"group": "t_git_sub_branch@1"
-				}
-			],
-			"puvox.tgit.sub_submodule" : [
-				{
-					"command": "puvox.tgit.subadd",
-					"group": "t_git_sub_submodule@1"
-				},
-				{
-					"command": "puvox.tgit.subupdate",
-					"group": "t_git_sub_submodule@2"
-				},
-				{
-					"command": "puvox.tgit.subsync",
-					"group": "t_git_sub_submodule@3"
-				}
-			]
+            ]
 		},
 		"keybindings": [
-			{
-				"command": "puvox.tgit.commit",
-				"key": "ctrl+g+c",
-				"when": "editorTextFocus"
-			},
-			{
-				"command": "puvox.tgit.switch",
-				"key": "ctrl+g+s",
-				"when": "editorTextFocus"
-			}
 		]
 	},
 	"scripts": {

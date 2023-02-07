@@ -10,13 +10,13 @@ export function activate(context: vscode.ExtensionContext) {
 	
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "TortoiseGit Buttons" is now active!');
+	console.log('Congratulations, your extension "TortoiseGit Menus" is now active!');
 
 	const allCommands = [
-		'pull', 'fetch', 'commit', 'push', 'stashsave', 'stashapply', 'stashpop', 'rename', 'revert',  'log', 'blame', 'diff', 'repostatus', 'showcompare', 'refbrowse', 'reflog', 'repobrowser', 'revisiongraph', 'resolve', 'conflicteditor', 'cleanup', 'rebase', 'merge', 'switch', 'add', 'remove', 'ignore', 'bisect', 'tag', 'settings', 'subadd', 'subupdate', 'subsync', 'export', 'lfslocks', 'daemon'
+		'add', 'blame', 'commit', 'diff', 'log', 'revert'
 	];
 	for (const value of allCommands) {
-		let disposable = vscode.commands.registerCommand("puvox.tgit." + value, (uri) => {
+		let disposable = vscode.commands.registerCommand("sjp27.tgit." + value, (uri) => {
 			let path = getPath(uri);
 			console.log("TortoiseGit: " + value + " -> " + path);
 			execTgCommand(value, path);
